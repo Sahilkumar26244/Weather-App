@@ -1,98 +1,98 @@
-@import url("https:fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Economica&family=Grape+Nuts&family=Roboto:wght@100;300;400;700;900&display=swap");
 
+* {
+  margin: 0%;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
 }
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: #43AFFC;
-}
-.wrapper{
-    width: 400px;
-    border-radius: 7px;
-    background: #fff;
 
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url("./bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  opacity: 0.4;
 }
-.wrapper header {
-    color: #43AFFC;
-    font-size: 21px;
-    font-weight: 500;
-    padding: 16px 15px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #bfbfbf;
-}
-header i{
-    cursor: pointer;
-    font-size: 30px;
-    margin-right: 8px;
-}
-.wrapper .input-part {
-    display: none;
-    margin: 20px 25px 30px;
 
+.weather {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  color: white;
 }
-.input-part .info-txt{
-    display: none;
-    font-size: 17px;
-    /* background: red; */
-    text-align: center;
-    padding: 12px 10px;
-    border-radius: 7px;
-    margin-bottom: 15px;
+
+.weather > div {
+  margin: 0.625rem;
 }
-.info-txt.error {
-    display: block;
-    color: #721c24;
-    background: #f8d7da;
-    border: 1px solid #f5c6cb;
+
+.weather1 {
+  font-size: 4rem;
 }
-.info-txt.pending {
-    display: block;
-    color: #0c5460;
-    background: #d1ecf1;
-    border: 1px solid #bee5eb;
+
+.weather p {
+  font-size: 2rem;
 }
-.input-part :where(input,button){
-    width: 100%;
-    border: none;
-    height: 55px;
-    outline: none;
-    font-size: 18px;
-    border-radius: 7px;
+.weather span {
+  font-size: 0.75rem;
 }
-.input-part input {
-    text-align: center;
-    border: 1px solid #bfbfbf;
+
+.weather3 span {
+  margin: 0.3rem;
 }
-.input-part input:is(:focus, :valid) {
-    border: 2px solid #43AFFC;
+
+.weather3 img {
+  width: 2rem;
 }
-.input-part .separator{
-    height: 1px;
-    width: 100%;
-    margin: 25px 0;
-    background: #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+nav {
+  height: 100px;
+  border-radius: 100px 100px 0 0;
+  padding: 1rem 0;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.18);
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  background-color: rgba(180, 177, 177, 0.075);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.separator::before{
-    content: "or";
-    background: #fff;
-    padding: 0 15px;
-    font-size: 19px;
-    color: #ccc;
+
+nav form {
+  width: 70%;
+  grid-template-columns: 5fr 1fr;
+  display: grid;
 }
-.input-part button {
-    color: #fff;
-    background: #43AFFC;
-    cursor: pointer;
+
+.searchField {
+  font-size: 1.1rem;
+  outline: none;
+  color: white;
+  background-color: transparent;
+  padding: 1rem 0;
+  border: none;
+  border-bottom: 2px solid white;
+  width: 98%;
+}
+
+nav form button {
+  background-color: rgb(255, 195, 100);
+  border-radius: 0 25px 25px 0;
+  font-size: 1.1rem;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
